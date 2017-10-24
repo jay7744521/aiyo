@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"> 
+	<title>Document</title>
+	<link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/animat.css">
+    <link rel="stylesheet" href="css/index.css">
+     <script>   
+        (function (doc, win) {
+                var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if(clientWidth>=640){
+                            docEl.style.fontSize = '100px';
+                        }else{
+                            docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                        }
+                    };
+
+                if (!doc.addEventListener) return;
+                win.addEventListener(resizeEvt, recalc, false);
+                doc.addEventListener('DOMContentLoaded', recalc, false);
+            })(document, window);
+        </script>
+
+       
+	
+</head>
+<body>
+	<section class="main">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+                  <!-- 图一 -->
+				<div class="swiper-slide page1">
+					<img src="img/b1.png" alt="">
+					<img src="img/b2.png" alt="">
+					<span>个人简历</span>
+				</div>
+				  <!-- 图二 -->
+				<div class="swiper-slide page2">
+					<img src="img/c1.png" alt="">
+					<span class="a1">个人介绍</span>
+					<span class="a2">我叫侯林 今天二十四岁 家中四口人</span>
+
+				</div>
+				  <!-- 图三 -->
+				<div class="swiper-slide page3">
+					<img src="img/c1.png" alt="">
+					<span class="a1">个人经历</span>
+					<span class="a2">做过灯光助理 厨师，销售</span>
+				</div>
+				  <!-- 图四 -->
+				<div class="swiper-slide page4">
+					<span class=b1>个人联系</span>
+					
+				</div>
+			</div>
+		</div>
+	</section>	
+
+	<script src="js/swiper-3.4.2.min.js"></script>
+	<script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/swiper-3.4.2.jquery.min.js"></script>
+
+    <script>
+    var mySwiper = new Swiper ('.swiper-container', {
+    direction: 'vertical',
+    loop:true
+     })
+    </script>
+</body>
+</html>
